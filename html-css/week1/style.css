@@ -92,6 +92,10 @@ article {
     padding: 10px;
 }
 
+.skills-bar {
+    margin-top: 40px;
+}
+
 .skills-bar p {
     margin-bottom: 6px;
     margin-top: 20px;
@@ -160,7 +164,7 @@ aside {
 
 .info {
     width: 70%;
-    height: 60%;
+    height: 65%;
     display: flex;
 
 }
