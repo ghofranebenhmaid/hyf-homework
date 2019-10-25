@@ -1,0 +1,270 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="main.css">
+      <title>Homework week 3 Form</title>
+  </head>
+
+  <body>
+      <h1>Form</h1>
+      <form id="form1" method="post" action="success.html">
+          <div class="pc-tab">
+              <input checked="checked" id="tab1" type="radio" name="pct" />
+              <input id="tab2" type="radio" name="pct" />
+              <input id="tab3" type="radio" name="pct" />
+              <input id="tab4" type="radio" name="pct" />
+              <div id='progress-bar'>Progress bar</div>
+              <section>
+                  <div class="tab1">
+                      <h2>First page</h2>
+
+                      <div class="inputs">
+
+                          <!-- add additional html form inputs here...
+                        remember that the required ones each must have the class="input-required" -->
+
+                          <!-- Example (can be replaced by your own...) :  -->
+                          <div>
+                              <label for="firstname">Firstname*</label>
+                              <input type="text" class="input-required" id="firstname" name="firstname">
+                          </div>
+                          <div>
+                              <label for="lastname">Lastname*</label>
+                              <input type="text" class="input-required" id="lastname" name="lastname">
+                          </div>
+                          <div>
+                              <label for="country">Country</label>
+                              <select name="country">
+                                  <option value="denmark">Denmark</option>
+                                  <option value="germany">Germany</option>
+                                  <option value="sweden">Sweden</option>
+                                  <option value="norway">Norway</option>
+                              </select>
+                          </div>
+                          <div>
+                              <label for="streetaddress">Street address*</label>
+                              <input type="text" class="input-required" id="lastname" name="streetaddress">
+                          </div>
+                          <div>
+                              <label for="postcode">Post code*</label>
+                              <input type="number" class="input-required" id="postcode" name="postcode">
+                          </div>
+                          <div class="description">
+                              <label for="profiledescription">Profile description</label>
+                              <textarea rows="5" cols="550" name="comment" form="usrform">Description...</textarea>
+                          </div>
+                          <div class="item5">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                              <div class="item3">
+                                  <label for="toggle-1"> <span>Shipping address</span> </label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                                  <!--  -->
+                                  <div class="inputs">
+                                      <div>
+                                          <label for="firstname">Firstname*</label>
+                                          <input type="text" class="input-required" id="firstname" name="firstname">
+                                      </div>
+
+                                      <div>
+                                          <label for="lastname">Lastname*</label>
+                                          <input type="text" class="input-required" id="lastname" name="lastname">
+                                      </div>
+                                      <div class="item">
+
+                                          <label for="country">Country</label>
+                                          <select name="country">
+                                              <option value="denmark">Denmark</option>
+                                              <option value="germany">Germany</option>
+                                              <option value="sweden">Sweden</option>
+                                              <option value="norway">Norway</option>
+                                          </select>
+                                      </div>
+                                      <div class="item">
+                                          <label for="streetaddress">Street address*</label>
+                                          <input type="text" class="input-required" id="lastname" name="streetaddress">
+                                      </div>
+                                      <div>
+                                          <label for="postcode">Post code*</label>
+                                          <input type="number" class="input-required" id="postcode" name="postcode">
+                                      </div>
+                                      <div class="item2">
+                                          <label for="profiledescription">Profile description</label>
+                                          <textarea rows="5" cols="550" name="comment"
+                                              form="usrform">Description...</textarea>
+                                      </div>
+                                  </div>
+                                  <!--  -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="btn1">
+                          <label for="tab2" id="label2" class="navigation"> Next Step </label>
+                      </div>
+                  </div>
+                  <div class="tab2">
+                      <h2>Second page</h2>
+                      <div class="inputs">
+
+                          <!-- add additional html form inputs here...
+                         remember that the required ones each must have the class="input-required" -->
+                          <div>
+                              <label for="email">Email*</label>
+                              <input type="text" class="input-required" id="email" name="email">
+                          </div>
+                          <div>
+                              <label for="phone">Phone</label>
+                              <input type="number" class="input-required" id="phone" name="phone">
+                          </div>
+                          <div class="item">
+                              <label for="password">Password*</label>
+                              <input type="text" class="input-required" id="password" name="password">
+                          </div>
+                          <div class="item">
+                              <label for="re-password">Re-enter Password*</label>
+                              <input type="text" class="input-required" id="re-password" name="re-password">
+                          </div>
+                          <div class="item">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam.</p>
+                          </div>
+                          <div class="box item2">
+                              <div class="line">
+                                  <label for="toggle-1">Weekly news</label>
+                                  <input type="checkbox" id="toggle-1">
+                              </div>
+                              <div class="line">
+                                  <label for="toggle-1">Monthly news</label>
+                                  <input type="checkbox" id="toggle-1">
+                              </div>
+                              <div class="line">
+                                  <label for="toggle-1">Don't send me news</label>
+                                  <input type="checkbox" id="toggle-1">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="btn">
+                          <label for="tab1" class="navigation">Previous Step</label>
+                          <label for="tab3" id="label3" class="navigation">Next Step</label>
+                      </div>
+                  </div>
+
+                  <div class="tab3">
+                      <h2>Third page</h2>
+                      <div class="inputs">
+                          <!-- add additional html form inputs here...
+                         remember that the required ones each must have the class="input-required" -->
+                          <div class="box item2">
+                              <div class="line">
+                                  <label for="toggle-1">Apparal</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div class="line">
+                                  <label for="toggle-1">Accessories</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div class="line">
+                                  <label for="toggle-1">Handbags</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div class="line">
+
+                                  <label for="toggle-1">Jewelry</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div class="line">
+
+                                  <label for="toggle-1">Shoes</label>
+                                  <input type="checkbox" id="toggle-1">
+                              </div>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil!</p>
+                          <div class="box item">
+                              <div>
+                                  <div class="boxs"></div>
+                                  <label for="toggle-1">Select</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div>
+                                  <div class="boxs"></div>
+                                  <label for="toggle-1">Select</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div>
+                                  <div class="boxs"></div>
+                                  <label for="toggle-1">Select</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div>
+                                  <div class="boxs"></div>
+                                  <label for="toggle-1">Select</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div>
+                                  <div class="boxs"></div>
+                                  <label for="toggle-1">Select</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                              <div>
+                                  <div class="boxs"></div>
+                                  <label for="toggle-1">Select</label>
+                                  <input type="checkbox" checked="checked" id="toggle-1">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="btn">
+                          <label for="tab2" class="navigation">Previous Step</label>
+                          <label for="tab4" id="label4" class="navigation">Next Step</label>
+                      </div>
+                  </div>
+                  <div class="tab4">
+                      <h2>Fourth page</h2>
+                      <div class="inputs">
+                          <!-- add additional html form inputs here...
+                         remember that the required ones each must have the class="input-required" -->
+                          <div>
+                              <label for="nameoncard">Name on card</label>
+                              <input type="text" class="input-required" id="nameoncard" name="email">
+                          </div>
+                          <div class="item">
+                              <label for="cardtype">Card type</label>
+                              <select name="cardtype">
+                                  <option value="a">Visa</option>
+                                  <option value="b">MasterCard</option>
+                                  <option value="c">Maestro</option>
+                              </select>
+                          </div>
+                          <div class="item">
+                              <label for="creditcart">Credit card number</label>
+                              <input type="number" class="input-required" id="creditcart" name="creditcart">
+                          </div>
+                          <div>
+                              <label for="firstname">Firstname</label>
+                              <input type="text" class="input-required" id="firstname" name="firstname">
+                          </div>
+                          <div class="item">
+                              <label for="expiryM">Expiry month</label>
+                              <input type="text" class="input-required" id="expiryM" name="streetaddress">
+                          </div>
+                          <div>
+                              <label for="expiryY">Expiry year</label>
+                              <input type="text" class="input-required" id="postcode" name="postcode">
+                          </div>
+                          <div>
+                              <label for="ccv">CCV</label>
+                              <input type="text" class="input-required" id="ccv" name="ccv">
+                          </div>
+                      </div>
+                      <label for="tab3" class="navigation">Previous Step</label>
+                      <input type="submit" id="submit">
+                  </div>
+              </section>
+          </div>
+      </form>
+      <script src="main.js"></script>
+
+  </body>
+
+  </html>
