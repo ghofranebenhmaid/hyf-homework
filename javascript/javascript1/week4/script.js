@@ -101,27 +101,30 @@ function getReply(command){
 
         let name = command.match(/(?<=dd\s+).*?(?=\s+the)/gs);
         let date = command.match(/(?<=the\s+).*?(?=\s+to my calendar)/gs);
-        events.push({'name': name, 'date': date});
+        events.push({name: name, date: date});
         
         return `${name} added to your calendar the ${date}`;
     }else if(command1.includes("what am i doing this week")){
-        
+
         let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         let  message = `This week you have ${events.length} event:`;
 
         for (let i = 0; i < events.length; i++) {
             
             let str = events[i].date; // "3/5/2019"
+            str = str.toString();
             let arr = str.split('/'); // ["3", "5", "2019"]
+            
             let d = eval(arr[0]);
             let m = eval(arr[1]);
             let y = eval(arr[2]);
             
             if(i==0){
-                s = ` ${events[0].name} the ${d}. of ${months[m]} ${y}`;
+                s = ` ${events[i].name} the ${d}. of ${months[m-1]} ${y}`;
                 message = message.concat(s);
             }else{
-                s = ` and ${events[i].name} the ${d}. of ${months[m]} ${y}`;
+                s = ` and ${events[i].name} the ${d}. of ${months[m-1]} ${y}`;
+                message = message.concat(s);
             }
             
         }
@@ -147,5 +150,6 @@ console.log(getReply("My favorite dish is lasagne"));
 console.log(getReply("What is my favorite dish?"));
 console.log(getReply("Set a timer for 1 minutes"));
 console.log(getReply("Add Bike ride the 3/5/2019 to my calendar"));
+console.log(getReply("Add Ski the 4/12/2020 to my calendar"));
 console.log(getReply("What am I doing this week?"));
 
