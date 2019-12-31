@@ -1,0 +1,173 @@
+*{
+    /* font-family: Arial, Helvetica, sans-serif;  */
+    font-family: 'Alex Brush'; 
+
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(0, 5, 75); */
+    
+background: linear-gradient(-45deg , rgba(248,181,0,1),rgba(179,255,171,1), rgba(18,255,247,1) , rgb(14, 156, 250), rgb(136, 2, 214), rgb(238, 123, 16) );
+background-size: 400% 400%;
+position: relative;
+animation: change 35s ease-in-out infinite;
+}
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#btn-search, #btn-location{
+width: 60px;
+height: 45px;
+background-color: rgb(53, 205, 252); 
+color: rgb(255, 255, 255);
+font-size: 24px;
+margin: 0;
+border: none;
+border-radius: 0 20px 20px 0;
+
+}
+#btn-location:hover{
+    background-color: rgb(40, 181, 247);
+    transition: .3s ease-out;
+    box-shadow: 0 1px 2px rgba(3, 3, 3, 0.15);
+}
+#btn-search:hover{
+    background-color: rgb(40, 181, 247);
+    transition: .3s ease-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.253);
+}
+#btn-location{
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    margin: 7px;
+}
+input{
+    width: 300px;
+    height: 45px;
+    font-size: 19px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    padding:0 0 0 25px  ;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+   
+}
+#search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 9px;
+}
+
+/**********   **********/
+
+.container{
+    background-color: rgb(243, 243, 243);
+    /* background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 70%, rgba(187,187,187,1) 100%); */
+/* background: rgb(9, 231, 247);
+background: linear-gradient(0deg, rgb(23, 187, 236) 0%, rgb(94, 233, 252) 50%, rgb(255, 253, 143) 100%); */
+    width: 500px;
+    height: 945px;
+    border-radius: 30px;
+    margin: 10px 0 0 0;
+    border: #293251 solid 5px;
+    color: #293251;
+}
+.container:hover{
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.205);
+    transition: .3s ease-out;
+
+}
+.weather-container, .app-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.app-title{
+    background-color: rgb(255, 255, 255);
+    /* border-radius: 30px 30px 0 0; */
+    font-size: 25px;
+}
+.app-title p{
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+.weather-icon{
+    margin: 20px 0 0 0;
+}
+.temperature-value{
+    width: 300px;
+    height:60px;
+}
+
+.temperature-value p{
+    padding: 0;
+    margin: 0;
+
+    font-size: 5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-description p{
+    padding: 55px 0  25px;
+    margin: 0;
+
+    text-align: center;
+    font-size: 1.2em;
+    font-style: oblique;
+}
+.wind-speed p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+.sunrise-and-sunset{
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.3em;
+}
+.sunrise-and-sunset img{
+    width: 1.5em;
+}
+.location p{
+    padding: 0;
+    margin: 25px;
+    text-align: center;
+    font-size: 2em;
+    font-style: normal;
+}
+.location i{
+    font-size: 0.9em;
+}
+.map{
+    width: 500px;
+    height: 325px;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    justify-content: center;
+}
+.map p{
+    color: #e90404;
+    margin: auto;
+    font-size: 39px;
+    width: 300px;
+    text-align: center;
+}
