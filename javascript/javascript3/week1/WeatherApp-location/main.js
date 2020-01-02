@@ -1,8 +1,6 @@
 //Weather app
 //Use my current position optional
 
-
-
 const KELVIN = 273;
 const key = '5f88cc0ee2aac21d465d480c160abd04';
 
@@ -14,6 +12,13 @@ searchForm.addEventListener('submit', function(e) {
    fetchFunc(location)
    fetchLocation();
 });
+
+// const btnLocation = document.getElementById('btn-location');
+// btnLocation.addEventListener('click', function(e) {
+//    e.preventDefault();
+//    //fetchFunc(location)
+//    fetchLocation();
+// });
 
 
 function fetchFunc(location) {
@@ -48,7 +53,6 @@ function fetchLocation(lat, lon) {
       });
    geoLocation();
 }
-
 function rendemFunc(data) {
    let tempElement = Math.floor(data.main.temp - KELVIN);
 
@@ -83,8 +87,9 @@ function rendemFunc(data) {
    let latitude = data.coord.lat;
    let longitude = data.coord.lon;
    console.log(latitude, longitude);
-
+   
    function myMap() {
+
       map = new google.maps.Map(document.querySelector('.map'), {
          center: { lat: latitude, lng: longitude },
          zoom: 12
