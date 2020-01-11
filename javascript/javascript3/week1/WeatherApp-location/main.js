@@ -44,7 +44,7 @@ function geoLocation() {
 }
 
 function fetchLocation(lat, lon) {
-   let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
+   let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
    fetch(api)
       .then((r) => r.json())
       .then((res) => {
