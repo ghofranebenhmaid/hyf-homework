@@ -1,0 +1,65 @@
+*{
+    background-color: rgb(0, 0, 99);
+    width: 100pm;
+    height: 100pm;
+    color: #fff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    color: burlywood;
+    font-size: 90px;
+}
+input{
+    width: 350px;
+    height: 65px;
+    margin: 20px;
+    padding: 0 23px 0;
+    font-size: 36px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 4px;
+}
+button{
+    background: burlywood;
+    width: 200px;
+    height: 65px;
+    font-size: 20px; 
+    border-radius: 4px;
+}
+#pressL, #pressS{
+    width: 300px;
+    height: 350px;
+    border-radius: 30px;
+    border: 2px solid rgb(226, 226, 226);
+    background-color: none;
+    margin: auto 35px  ;
+
+}
+#Keyboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 45px 10px ;
+}
+#Keyboard p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+button:hover{
+    background: rgb(187, 150, 102);
+    color: rgb(255, 255, 255);
+    transition: ease-out .5s;
+    font-size: 22px;
+}
+#countdown{
+    margin: 10px;
+}
