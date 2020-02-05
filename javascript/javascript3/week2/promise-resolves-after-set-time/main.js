@@ -1,17 +1,17 @@
-const api = 'https://yesno.wtf/api';
-  const api2 = 'https://dog.ceo/api/breeds/image/random';
-  const api3 = 'http://api.open-notify.org/astros.json';
-function fetchImg() {
-    fetch(api3)
-    .then(res => res.json())
-    .then(result => {
-        console.log(result);
-        
-    });
-    
+function logAfterTime(resolveAfter) {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         resolve('I am called asynchronously');
+         reject('There is an error');
+      }, resolveAfter);
+   });
 }
+// Log after 3 seconds
+logAfterTime(3000)
+   .then((response) => console.log(response))
+   .catch((err) => console.log(err));
 
-setTimeout(fetchImg, 3000)
-
-
-
+// Log after 6 seconds
+logAfterTime(6000)
+   .then(console.log)
+   .catch(console.log);
