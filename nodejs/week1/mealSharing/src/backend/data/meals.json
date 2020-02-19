@@ -1,0 +1,34 @@
+[
+   {
+      "id": 1,
+      "title": "Pasta",
+      "maxNumberOfGuests": 10,
+      "description": "Pasta pasta",
+      "createdAt": "2020/02/17 14:34",
+      "price": 60
+   },
+   {
+      "id": 2,
+      "title": "Shawarma",
+      "maxNumberOfGuests": 100,
+      "description": "A morning breakfast ",
+      "createdAt": "2020/02/18 15:14",
+      "price": 35
+   },
+   {
+      "id": 3,
+      "title": "pizza",
+      "maxNumberOfGuests": 50,
+      "description": "chicken pizza",
+      "createdAt": "2020/02/19 11:14",
+      "price": 80
+   },
+   {
+      "id": 4,
+      "title": "Burger",
+      "maxNumberOfGuests": 150,
+      "description": "cheese burger",
+      "createdAt": "2020/02/19 12:15",
+      "price": 40
+   }
+]
