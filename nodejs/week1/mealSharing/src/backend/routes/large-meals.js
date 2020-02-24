@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 
 const mealsJson = require(__dirname + '/../data/meals.json');
 const reviewsJson = require(__dirname + '/../data/reviews.json');
@@ -16,8 +16,8 @@ largeMealsArray.forEach((meal) => {
    });
 });
 
-app.get('/large-meals', (request, response) => {
+router.get('/large-meals', (request, response) => {
    response.send(largeMealsArray);
 });
 
-module.exports = app;
+module.exports = router;

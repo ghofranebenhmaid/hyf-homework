@@ -1,12 +1,12 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 
 const reservationsJson = require(__dirname + '/../data/reservations.json');
 
-app.get('/reservation', (request, response) => {
+router.get('/reservation', (request, response) => {
    let randomReservation =
       reservationsJson[Math.floor(Math.random() * reservationsJson.length)];
    response.send(randomReservation);
 });
 
-module.exports = app;
+module.exports = router;

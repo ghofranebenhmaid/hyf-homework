@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 
 const mealsJson = require(__dirname + '/../data/meals.json');
 const reviewsJson = require(__dirname + '/../data/reviews.json');
@@ -13,9 +13,9 @@ mealsJson.forEach((meal) => {
    });
 });
 
-app.get('/meal', (request, response) => {
+router.get('/meal', (request, response) => {
    let randomMeal = mealsJson[Math.floor(Math.random() * mealsJson.length)];
    response.send(randomMeal);
 });
 
-module.exports = app;
+module.exports = router;

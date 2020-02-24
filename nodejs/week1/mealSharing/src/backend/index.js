@@ -8,4 +8,7 @@ app.get('/reservations', require('./routes/reservations'));
 app.get('/cheap-meals', require('./routes/cheap-meals'));
 app.get('/large-meals', require('./routes/large-meals'));
 
+app.get('/', (req, res) => {
+   res.send('Hallo ..');
+});
 app.listen(3000);

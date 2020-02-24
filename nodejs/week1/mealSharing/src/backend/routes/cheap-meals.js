@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 
 const mealsJson = require(__dirname + '/../data/meals.json');
 const reviewsJson = require(__dirname + '/../data/reviews.json');
@@ -14,8 +14,8 @@ cheapMealsArray.forEach((meal) => {
    });
 });
 
-app.get('/cheap-meals', (request, response) => {
+router.get('/cheap-meals', (request, response) => {
    response.send(cheapMealsArray);
 });
 
-module.exports = app;
+module.exports = router;

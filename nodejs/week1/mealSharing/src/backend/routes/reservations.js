@@ -1,10 +1,10 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 
 const reservationsJson = require(__dirname + '/../data/reservations.json');
 
-app.get('/reservations', (request, response) => {
+router.get('/reservations', (request, response) => {
    response.send(reservationsJson);
 });
 
-module.exports = app;
+module.exports = router;
