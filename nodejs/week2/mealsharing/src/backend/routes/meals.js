@@ -9,7 +9,7 @@ const meals = require(__dirname + '/../data/meals.json');
 
 router.get('/:id', (req, res) => {
    let id = req.params.id;
-   let meal = meals.filter((items) => items.id === parseInt(id));
+   let meal = meals.find((items) => items.id === parseInt(id));
    if (!meal) {
       res.status(404).send(`The meal with the given ID: ${id} was not found`);
    }
