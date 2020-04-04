@@ -1,17 +1,17 @@
 const todosData = [
    {
       id: 1,
-      description: 'Get out of bed',
+      description: 'Learn javascript',
       done: false
    },
    {
       id: 2,
-      description: 'Brush teeth',
+      description: 'Learn node js',
       done: false
    },
    {
       id: 3,
-      description: 'Eat breakfast',
+      description: 'Learn react js',
       done: false
    }
 ];

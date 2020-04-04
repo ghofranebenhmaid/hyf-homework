@@ -4,13 +4,8 @@ import TodoItem from './TodoItem';
 import Timer from './Timer';
 
 class TodoList extends React.Component {
-   constructor(props) {
-      super(props);
-      this.state = {
-         todos: todosData
-      };
-      this.handleChange = this.handleChange.bind(this);
-   }
+   state = { todos: todosData };
+
    addTodo = () => {
       const newItem = { description: 'newText' };
       const newList = this.state.todos.concat(newItem);
@@ -19,49 +14,50 @@ class TodoList extends React.Component {
       });
    };
 
-    removeTodo = (index) =>
-    {
-       const todo = Object.assign([], this.state.todos);
-       todo.splice(index, 1);
-       this.setState({ todos: todo });
-       
-    };
+   removeTodo = (index) => {
+      const todo = Object.assign([], this.state.todos);
+      todo.splice(index, 1);
+      this.setState({ todos: todo });
+      console.log(todo);
+      console.log(todosData);
+   };
 
-   handleChange(id) {
+   handleChange = (id) => {
       this.setState((prevState) => {
          const updatedTodos = prevState.todos.map((todo) => {
             if (todo.id === id) {
                return {
                   ...todo,
-                  done: !todo.done
+                  done: !todo.done,
                };
             }
             return todo;
          });
          return {
-            todos: updatedTodos
+            todos: updatedTodos,
          };
       });
-   }
-   render() {
+   };
+   render () {
       const todoItems = this.state.todos.map((item) => (
-         <TodoItem key={ item.id } item={ item } handleChange={ this.handleChange } removeTodo={ this.removeTodo} />
+         <TodoItem
+            key={item.id}
+            item={item}
+            handleChange={this.handleChange}
+            removeTodo={this.removeTodo}
+         />
       ));
 
       return (
-
-         
          <div className='container'>
             <Timer />
             <button className='btn add-todo' onClick={this.addTodo}>
                Add todo
             </button>
-            { todoItems }
-            </div>
-         
+            {todoItems}
+         </div>
       );
    }
 }
 
 export default TodoList;
-
