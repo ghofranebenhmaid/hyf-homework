@@ -6,7 +6,7 @@
 }
 
 .App-header {
-   background-color: #d1d1d1;
+   background-color: #eeeeee;
    min-height: 100vh;
    display: flex;
    flex-direction: column;
@@ -22,13 +22,17 @@
 }
 .profil {
    display: flex;
-   justify-content: center;
    align-items: center;
-   margin: 50px auto;
+   margin: 3px auto;
+   padding: 5px 50px 5px 5px;
+
+   border: 2px solid rgb(189, 189, 189);
+   border-radius: 5px;
+   background-color: #ffffff; 
 }
 .profil img {
-   border-radius: 8%;
-   width: 70px;
+   border-radius: 50%;
+   width: 35px;
    margin: 0 20px 0;
-   border: 5px solid rgba(22, 201, 201, 0);
+   border: 2px solid rgba(0, 0, 0, 0.664);
 }

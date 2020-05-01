@@ -8,7 +8,7 @@ export class Provider extends Component {
    };
 
    fetch() {
-      fetch(`https://api.github.com/search/users?q=benhmaid`)
+      fetch(`https://api.github.com/search/users?q=benk`)
          .then((res) => res.json())
          .then((data) => {
             console.log(data.items);
@@ -19,9 +19,7 @@ export class Provider extends Component {
          .catch((error) => console.log(error));
    }
 
-  
    componentDidMount() {
-      
       this.fetch();
    }
    render() {
