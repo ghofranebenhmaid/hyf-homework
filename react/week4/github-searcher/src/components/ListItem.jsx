@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Context } from '../context';
-import Loading from './api/Loading';
+import Loading from './Loading';
 import Users from './User';
 
 class ListItem extends Component {
+
    render() {
       return (
          <Context.Consumer>
@@ -16,7 +17,6 @@ class ListItem extends Component {
                      userName={item.login}
                   />
                ));
-
                return githubList === undefined || githubList.length === 0 ? (
                   <Loading />
                ) : (

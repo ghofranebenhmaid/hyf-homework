@@ -1,48 +1,67 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { Context } from '../context';
+import Users from './User';
+import Loading from './Loading';
 
 class Search extends Component {
    state = {
-      githubList: [],
+      usersArray: [],
       userName: '',
    };
-   findUser(e) {
+
+   findUser = (e) => {
       e.preventDefault();
       fetch(`https://api.github.com/search/users?q=${this.state.userName}`)
          .then((res) => res.json())
          .then((data) => {
             console.log(data.items);
             this.setState({
-               githubList: data.items,
+               usersArray: data.items,
                userName: '',
             });
          })
          .catch((error) => console.log(error));
-   }
+   };
 
-   onChange(e) {
+   onChange = (e) => {
       this.setState({ userName: e.target.value });
-   }
+   };
    render() {
       return (
          <Context.Consumer>
             {(value, index) => {
+               const { usersArray, userName } = this.state;
+               const Searching = usersArray.map((item) => (
+                  <Users
+                     key={item.id}
+                     items={item.avatar_url}
+                     userName={item.login}
+                  />
+               ));
                return (
-                  <form
-                     onSubmit={this.findUser.bind(this)}
-                     key={index}
-                     noValidate
-                     autoComplete='off'
-                  >
-                     <TextField
-                        id='outlined-secondary'
-                        label='Outlined secondary'
-                        variant='outlined'
-                        value={this.state.userName}
-                        onChange={this.onChange.bind(this)}
-                     />
-                  </form>
+                  <div>
+                     <h1>Github Search</h1>
+                     <form
+                        onSubmit={this.findUser}
+                        key={index}
+                        noValidate
+                        autoComplete='off'
+                     >
+                        <TextField
+                           id='outlined-secondary'
+                           label='Search users'
+                           variant='outlined'
+                           value={userName}
+                           onChange={this.onChange}
+                        />
+                     </form>
+                     {usersArray === undefined || usersArray.length === 0 ? (
+                        <Loading />
+                     ) : (
+                        Searching
+                     )}
+                  </div>
                );
             }}
          </Context.Consumer>
