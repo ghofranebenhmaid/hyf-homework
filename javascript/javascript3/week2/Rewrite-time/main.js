@@ -8,11 +8,8 @@ function getMessage() {
       }, 3000);
    });
 }
-
 getMessage().then((msg) => console.log(msg));
-
 // Get current location
-
 function getLocation() {
    return new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -22,7 +19,6 @@ function getLocation() {
       });
    });
 }
-
 getLocation()
    .then((location) => console.log(location))
    .catch((error) => {
