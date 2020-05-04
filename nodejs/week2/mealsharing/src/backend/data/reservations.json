@@ -1,0 +1,32 @@
+[
+   {
+      "id": 1,
+      "name": "Benhmaid Ghofrane",
+      "email": "ghofranebh90@gmail.com",
+      "mealId": 1
+   },
+   {
+      "id": 2,
+      "name": "Benjamin Hughes",
+      "email": "benjamin@hughes.dk",
+      "mealId": 2
+   },
+   {
+      "id": 3,
+      "name": "Zaineb Tounsi",
+      "email": "tounsizaineb@gmail.com",
+      "mealId": 3
+   },
+   {
+      "id": 4,
+      "name": "Wael Tounsi",
+      "email": "tounsiwael@gmail.com",
+      "mealId": 4
+   },
+   {
+      "id": 5,
+      "name": "Issam Benhmaid",
+      "email": "ibh@gmail.com",
+      "mealId": 5
+   }
+]
