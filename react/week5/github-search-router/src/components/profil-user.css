@@ -1,0 +1,35 @@
+
+.container-profil {
+   background-color: rgb(2, 232, 216);
+   width: 700px;
+   display: flex;
+   justify-content: start;
+   padding: 20px;
+   border-radius: 5px;
+}
+.profil-user img {
+   height: 300px;
+   border-radius: 10px;
+}
+h1,
+h3,
+h2,
+h5,
+p {
+   padding: 5px;
+}
+.profil-info {
+   color: rgb(33, 33, 33);
+   margin: 25px auto;
+}
+.profil-info span{
+    margin-right: 15px;
+}
+.arrow-back {
+   color: rgb(41, 41, 41);
+   font-size: 35px;
+   margin: 10px;
+}
+.arrow {
+   display: flex;
+}
