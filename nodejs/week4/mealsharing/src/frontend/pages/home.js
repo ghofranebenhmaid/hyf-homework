@@ -18,7 +18,7 @@ window.handleHomeRequest = () => {
         </div>
     </div>
 </header>
-<div style="background: #002065" class="jumbotron bg-cover text-white ">
+<div style="background: #002065" class="jumbotron big-banner bg-cover text-white ">
     <div class="container py-5 text-center ">
         <h1 class="display-4 font-weight-bold">Looking for a Meal</h1>
 
